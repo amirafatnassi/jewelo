@@ -398,14 +398,7 @@
                             <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
                         </ul>
                     </div>
-                    <span class="alt-font fw-500 text-dark-gray d-block mb-10px">Secure payment</span>
-                    <div class="footer-card d-block d-sm-flex align-items-center">
-                        <a href="#" class="d-inline-block me-5px align-middle"><img src="images/visa.svg" class="h-25px" alt=""></a>
-                        <a href="#" class="d-inline-block me-5px align-middle"><img src="images/mastercard.svg" class="h-25px" alt=""></a>
-                        <a href="#" class="d-inline-block me-5px align-middle"><img src="images/american-express.svg" class="h-25px" alt=""></a>
-                        <a href="#" class="d-inline-block me-5px align-middle"><img src="images/discover.svg" class="h-25px" alt=""></a>
-                        <a href="#" class="d-inline-block me-5px align-middle"><img src="images/diners-club.svg" class="h-25px" alt=""></a>
-                    </div>
+
                 </div>
                 <!-- end footer column -->
             </div>
@@ -417,7 +410,7 @@
                 <!-- end divider -->
                 <!-- start copyright -->
                 <div class="col-md-6 pt-20px pb-20px sm-pt-0 fs-16 order-2 order-md-1 text-center text-md-start last-paragraph-no-margin">
-                    <p>&copy; 2024 Crafto is Proudly Powered by <a href="https://www.themezaa.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray">ThemeZaa</a></p>
+                    <p>&copy; 2025 Developed by <a href="https://www.ehr-tech.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray">EHR tech</a></p>
                 </div>
                 <!-- end copyright -->
                 <!-- start footer menu -->
