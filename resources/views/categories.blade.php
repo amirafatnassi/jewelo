@@ -1,12 +1,12 @@
 ﻿<x-layouts.layout>
     <!-- start page title -->
-    <section class="half-section top-space-margin cover-background" style="background-image: url(https://placehold.co/1920x470)">
+    <section class="half-section top-space-margin cover-background" style="background-image: url('{{asset('images/background-jewelo.jpg')}}')">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-8 text-center position-relative page-title-extra-large">
                     <div class="d-flex flex-column extra-very-small-screen" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <div class="mt-auto">
-                            <h1 class="fw-500 text-dark-gray alt-font mb-0 ls-minus-2px">Categories</h1>
+                            <h1 class="fw-500 text-light-gray alt-font mb-0 ls-minus-2px">Categories</h1>
                         </div>
                         <div class="fs-16 fw-500 alt-font text-dark-gray justify-content-center breadcrumb breadcrumb-style-01 mt-auto">
                             <ul>
@@ -31,7 +31,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x477" alt="">
+                                    <img src="{{asset('images/bangle.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Bangles</h3>
@@ -47,7 +47,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x477" alt="">
+                                    <img src="{{asset('images/pendant.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Pendants</h3>
@@ -63,7 +63,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x477" alt="">
+                                    <img src="{{asset('images/chain.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Chain</h3>
@@ -79,7 +79,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x1003" alt="">
+                                    <img src="{{asset('images/earrings.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Earrings</h3>
@@ -95,7 +95,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x477" alt="">
+                                    <img src="{{asset('images/ring.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Rings</h3>
@@ -111,7 +111,7 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x1003" alt="">
+                                    <img src="{{asset('images/necklace.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Necklace</h3>
@@ -127,13 +127,29 @@
                         <li class="grid-item">
                             <div class="category-box bg-dark-gray">
                                 <div class="category-image">
-                                    <img src="https://placehold.co/600x477" alt="">
+                                    <img src="{{asset('images/bracelet.jpg')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
                                 </div>
                                 <div class="category-title absolute-middle-left">
                                     <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Bracelet</h3>
                                 </div>
                                 <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
                                     <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Bracelet<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">B</span></h3>
+                                    <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- end categories item -->
+                        <!-- start categories item -->
+                        <li class="grid-item">
+                            <div class="category-box bg-dark-gray">
+                                <div class="category-image">
+                                    <img src="{{asset('images/watch.webp')}}" style="width:600px; height:477px; object-fit:cover;" alt="">
+                                </div>
+                                <div class="category-title absolute-middle-left">
+                                    <h3 class="text-white alt-font fw-600 mb-0 text-shadow-large">Watch</h3>
+                                </div>
+                                <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
+                                    <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Watch<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">W</span></h3>
                                     <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
                                 </div>
                             </div>
@@ -150,22 +166,22 @@
         <div class="container-fluid p-0">
             <div class="row row-cols-3 row-cols-md-6 instagram-follow-api position-relative g-0">
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta1.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta2.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta3.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta1.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta2.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img src="https://placehold.co/445x445" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
+                    <figure class="border-radius-0px"><a href="https://www.instagram.com" target="_blank"><img  src="{{asset('images/insta3.jpg')}}" style="width:415px; height:300px;" class="insta-image" alt=""><span class="insta-icon"><i class="fa-brands fa-instagram"></i></span></a></figure>
                 </div>
                 <a href="https://www.instagram.com" target="_blank" class="instagram-button alt-font absolute-middle-center bg-white w-120px h-120px md-w-90px md-h-90px text-dark-gray border-radius-100px box-shadow-extra-large d-flex align-items-center justify-content-center"><i class="feather icon-feather-instagram icon-medium"></i></a>
             </div>
