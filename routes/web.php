@@ -7,6 +7,7 @@ Route::get('/', function () {return view('welcome');})->name('home');
 Route::get('/index', function () {return view('index');})->name('index');
 Route::get('/shop', function () {return view('shop');})->name('shop');
 Route::get('/categories', function () {return view('categories');})->name('categories');
+Route::get('/contact', function () {return view('contact');})->name('contact');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

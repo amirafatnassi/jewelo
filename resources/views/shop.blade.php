@@ -1,14 +1,13 @@
 ﻿<x-layouts.layout>
 
-
     <!-- start page title -->
-    <section class="half-section top-space-margin cover-background" style="background-image: url(https://placehold.co/1920x470)">
+    <section class="half-section top-space-margin cover-background" style="background-image: url('{{asset('images/background-jewelo.jpg')}}')">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 text-center position-relative page-title-extra-large">
                     <div class="d-flex flex-column extra-very-small-screen" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <div class="mt-auto">
-                            <h1 class="fw-500 text-dark-gray alt-font mb-0 ls-minus-2px">Shop collection</h1>
+                            <h1 class="fw-500 text-light-gray alt-font mb-0 ls-minus-2px">Shop collection</h1>
                         </div>
                         <div class="fs-16 fw-500 alt-font text-dark-gray justify-content-center breadcrumb breadcrumb-style-01 mt-auto">
                             <ul>

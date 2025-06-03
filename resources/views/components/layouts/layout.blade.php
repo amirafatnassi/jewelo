@@ -252,7 +252,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="demo-jewellery-store-blog.html" class="nav-link">Blog</a></li>
-                            <li class="nav-item"><a href="demo-jewellery-store-contact.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -380,10 +380,10 @@
                     <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Information</span>
                     <ul class="fs-16">
                         <li><a href="demo-jewellery-store-about.html">About us</a></li>
-                        <li><a href="demo-jewellery-store-contact.html">Careers</a></li>
+                        <li><a href="{{url('contact')}}">Careers</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Articles</a></li>
-                        <li><a href="demo-jewellery-store-contact.html">Contact us</a></li>
+                        <li><a href="{{url('contact')}}">Contact us</a></li>
                     </ul>
                 </div>
                 <!-- end footer column -->
