@@ -1,1 +1,45 @@
 *.sqlite*
+# Laravel & PHP
+/vendor/
+composer.lock
+
+# Laravel Environment Files
+.env
+.env.*.backup
+
+# Laravel Cache & Logs
+/storage/*.key
+/storage/app/public
+/storage/framework/*
+!/storage/framework/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# Laravel Testing
+/phpunit.xml
+/phpunit.result.cache
+
+# Laravel IDE Helper
+/_ide_helper.php
+/_ide_helper_models.php
+.phpstorm.meta.php/
+
+# Node & Frontend
+/node_modules/
+npm-debug.log
+yarn-error.log
+/vite.config.js
+
+# Build Artifacts
+/public/hot
+/public/storage
+/public/mix-manifest.json
+/public/js/*.map
+/public/css/*.map
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
