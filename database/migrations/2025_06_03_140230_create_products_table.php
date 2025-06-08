@@ -20,6 +20,7 @@ return new class extends Migration
             $table->decimal('old_price', 10, 2)->nullable();
             $table->string('label')->nullable(); // e.g., 'new', 'hot'
             $table->string('image');
+            $table->foreignId('color_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

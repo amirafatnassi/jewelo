@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\Color;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -45,6 +46,7 @@ class ProductFactory extends Factory
             'label' => $this->faker->randomElement(['new', 'hot', null]),
             'image' => Arr::random($images),
             'category_id' => Category::inRandomOrder()->first()?->id ?? Category::factory(),
+            'color_id' => Color::query()->inRandomOrder()->value('id') ?? Color::factory(),
 
         ];
     }

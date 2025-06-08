@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+        $this->call(ColorSeeder::class);
+
+
         \App\Models\Category::factory(7)->create();
         \App\Models\Product::factory(20)->create();
     }

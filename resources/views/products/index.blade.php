@@ -121,12 +121,9 @@
                     <div class="mb-30px">
                         <span class="alt-font fw-500 fs-19 text-dark-gray d-block mb-10px">Color</span>
                         <ul class="shop-filter color-filter fs-17">
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#232323"></span>Black</a><span class="item-qty">05</span></li>
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#8E412E"></span>Chestnut</a><span class="item-qty">24</span></li>
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#E0A699"></span>Brown</a><span class="item-qty">32</span></li>
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#E0A699"></span>Pastel pink</a><span class="item-qty">22</span></li>
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#9DA693"></span>Litchen green</a><span class="item-qty">09</span></li>
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color:#E7C06D"></span>Yellow</a><span class="item-qty">06</span></li>
+                            @foreach ($colors as $color)
+                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color: {{ $color->hex }};"></span>{{$color->name}}</a><span class="item-qty">{{$color->products->count()}}</span></li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="mb-30px">

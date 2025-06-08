@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Color;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,8 +15,9 @@ class ProductController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $colors = Color::all();
         $products = Product::with('category')->latest()->paginate(12);
-        return view('products.index', compact('categories','products'));
+        return view('products.index', compact('categories','colors','products'));
     }
 
     /**

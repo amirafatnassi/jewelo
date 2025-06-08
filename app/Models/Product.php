@@ -22,10 +22,16 @@ class Product extends Model
         'label',
         'image',
         'category_id',
+        'color_id'
     ];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function color()
+    {
+        return $this->belongsTo(Color::class);
     }
 }
