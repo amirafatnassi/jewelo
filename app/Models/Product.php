@@ -10,6 +10,20 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     */
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'price',
+        'old_price',
+        'label',
+        'image',
+        'category_id',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

@@ -10,6 +10,11 @@ class Category extends Model
     /** @use HasFactory<\Database\Factories\CategoryFactory> */
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     */
+    protected $fillable = ['name'];
+
     public function products()
     {
         return $this->hasMany(Product::class);

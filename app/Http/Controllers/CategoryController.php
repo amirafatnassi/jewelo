@@ -1,64 +1,70 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show all categories.
      */
     public function index()
     {
-        //
+        $categories = Category::latest()->get();
+        return view('categories.index', compact('categories'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new category.
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new category.
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name',
+        ]);
+
+        Category::create($data);
+
+        return redirect()->route('categories.index')->with('success', 'Category created.');
     }
 
     /**
-     * Display the specified resource.
+     * Show form to edit a category.
      */
-    public function show(string $id)
+    public function edit(Category $category)
     {
-        //
+        return view('categories.edit', compact('category'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Update an existing category.
      */
-    public function edit(string $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name,' . $category->id,
+        ]);
+
+        $category->update($data);
+
+        return redirect()->route('categories.index')->with('success', 'Category updated.');
     }
 
     /**
-     * Update the specified resource in storage.
+     * Delete a category.
      */
-    public function update(Request $request, string $id)
+    public function destroy(Category $category)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $category->delete();
+        return back()->with('success', 'Category deleted.');
     }
 }
