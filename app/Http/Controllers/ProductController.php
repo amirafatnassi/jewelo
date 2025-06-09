@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Color;
+use App\Models\Metal;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,13 +13,62 @@ class ProductController extends Controller
     /**
      * Display a listing of all products with pagination.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::all();
+        $query = Product::query();
+
+        // Filter by price
+        if ($request->filled('price_min')) {
+            $query->where('price', '>=', $request->price_min);
+        }
+        if ($request->filled('price_max')) {
+            $query->where('price', '<=', $request->price_max);
+        }
+
+        // Filter by color
+        if ($request->filled('color_id')) {
+            $query->where('color_id', $request->color_id);
+        }
+
+        // Metal filter
+        if ($request->filled('metal_id')) {
+            $query->where('metal_id', $request->metal_id);
+        }
+
+        $products = $query->paginate(12);
+
+        // Price counts for UI
+        $counts = [
+            'under_25'   => Product::where('price', '<', 25)->count(),
+            '25_to_50'   => Product::whereBetween('price', [25, 50])->count(),
+            '50_to_100'  => Product::whereBetween('price', [50, 100])->count(),
+            '100_to_200' => Product::whereBetween('price', [100, 200])->count(),
+            'above_200'  => Product::where('price', '>', 200)->count(),
+        ];
+
+        // Fetch colors for filter list
         $colors = Color::all();
-        $products = Product::with('category')->latest()->paginate(12);
-        return view('products.index', compact('categories','colors','products'));
+
+        // Count products by color for UI
+        $colorCounts = Product::select('color_id')
+            ->selectRaw('count(*) as count')
+            ->groupBy('color_id')
+            ->pluck('count', 'color_id')
+            ->toArray();
+
+        // Metals & counts (optional)
+        $metals = Metal::all();
+        $metalCounts = Product::select('metal_id')
+            ->selectRaw('count(*) as count')
+            ->groupBy('metal_id')
+            ->pluck('count', 'metal_id')
+            ->toArray();
+        $categories = Category::all();
+        $metals = Metal::all();
+
+        return view('products.index', compact('categories', 'metals', 'products', 'counts', 'colors', 'colorCounts','metalCounts'));
     }
+
 
     /**
      * Show the form for creating a new product.

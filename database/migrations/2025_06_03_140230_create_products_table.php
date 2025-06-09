@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image');
             $table->foreignId('color_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('metal_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

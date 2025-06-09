@@ -34,4 +34,9 @@ class Product extends Model
     {
         return $this->belongsTo(Color::class);
     }
+
+    public function metal()
+    {
+        return $this->belongsTo(Metal::class);
+    }
 }

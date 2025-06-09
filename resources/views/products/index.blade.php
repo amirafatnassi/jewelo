@@ -56,7 +56,9 @@
                                 <div class="shop-image mb-6">
                                     <a href="demo-jewellery-store-single-product.html">
                                         <img src="{{ asset('images/products/'.$product->image) }}" alt="" style="width: 400px; height: 465px; object-fit: cover; border-radius: 8px; display: block; margin: 0 auto;">
-                                        <span class="lable new">New</span>
+                                        <span class="lable new mr-1">{{$product->category->name}}</span>
+                                        <span class="lable new mr-1">{{$product->metal->name}}</span>
+                                        <span class="lable new mr-1">{{$product->color->name}}</span>
                                     </a>
                                     <div class="shop-buttons-wrap">
                                         <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
@@ -122,27 +124,58 @@
                         <span class="alt-font fw-500 fs-19 text-dark-gray d-block mb-10px">Color</span>
                         <ul class="shop-filter color-filter fs-17">
                             @foreach ($colors as $color)
-                            <li><a href="#"><span class="product-cb product-color-cb" style="background-color: {{ $color->hex }};"></span>{{$color->name}}</a><span class="item-qty">{{$color->products->count()}}</span></li>
+                            <li>
+                                <a href="{{ route('products.index', array_merge(request()->query(), ['color_id' => $color->id])) }}">
+                                    <span
+                                        class="color-circle"
+                                        style="background-color: {{ $color->hex }}; display:inline-block; width:20px; height:20px; border-radius:50%; margin-right:8px;">
+                                    </span>
+                                    {{ $color->name }}
+                                </a>
+                                <span class="item-qty">{{ $colorCounts[$color->id] ?? 0 }}</span>
+                            </li>
                             @endforeach
                         </ul>
                     </div>
                     <div class="mb-30px">
                         <span class="alt-font fw-500 fs-19 text-dark-gray d-block mb-10px">Price</span>
                         <ul class="shop-filter price-filter fs-17">
-                            <li><a href="#"><span class="product-cb product-category-cb"></span>Under $25</a><span class="item-qty">08</span></li>
-                            <li><a href="#"><span class="product-cb product-category-cb"></span>$25 to $50</a><span class="item-qty">05</span></li>
-                            <li><a href="#"><span class="product-cb product-category-cb"></span>$50 to $100</a><span class="item-qty">25</span></li>
-                            <li><a href="#"><span class="product-cb product-category-cb"></span>$100 to $200</a><span class="item-qty">18</span></li>
-                            <li><a href="#"><span class="product-cb product-category-cb"></span>$200 & Above</a><span class="item-qty">36</span></li>
+                            <li><a href="{{ route('products.index', ['price_min' => 0, 'price_max' => 25]) }}">
+                                    <span class="product-cb product-category-cb"></span>Under $25
+                                </a><span class="item-qty">{{ $counts['under_25'] ?? 0 }}</span></li>
+
+                            <li><a href="{{ route('products.index', ['price_min' => 25, 'price_max' => 50]) }}">
+                                    <span class="product-cb product-category-cb"></span>$25 to $50
+                                </a><span class="item-qty">{{ $counts['25_to_50'] ?? 0 }}</span></li>
+
+                            <li><a href="{{ route('products.index', ['price_min' => 50, 'price_max' => 100]) }}">
+                                    <span class="product-cb product-category-cb"></span>$50 to $100
+                                </a><span class="item-qty">{{ $counts['50_to_100'] ?? 0 }}</span></li>
+
+                            <li><a href="{{ route('products.index', ['price_min' => 100, 'price_max' => 200]) }}">
+                                    <span class="product-cb product-category-cb"></span>$100 to $200
+                                </a><span class="item-qty">{{ $counts['100_to_200'] ?? 0 }}</span></li>
+
+                            <li><a href="{{ route('products.index', ['price_min' => 200]) }}">
+                                    <span class="product-cb product-category-cb"></span>$200 & Above
+                                </a><span class="item-qty">{{ $counts['above_200'] ?? 0 }}</span></li>
                         </ul>
+
                     </div>
                     <div class="mb-30px">
                         <span class="alt-font fw-500 fs-19 text-dark-gray d-block mb-10px">Metal and stone</span>
                         <ul class="shop-filter fabric-filter fs-17">
-                            <li><a href="#"><span class="product-cb product-fabric-cb"><img src="images/demo-jewellery-store-product-listing-metal-02.jpg" alt="" /></span>Rose gold</a><span class="item-qty">08</span></li>
-                            <li><a href="#"><span class="product-cb product-fabric-cb"><img src="images/demo-jewellery-store-product-listing-metal-03.jpg" alt="" /></span>Platinum</a><span class="item-qty">08</span></li>
-                            <li><a href="#"><span class="product-cb product-fabric-cb"><img src="images/demo-jewellery-store-product-listing-metal-01.jpg" alt="" /></span>Yellow gold</a><span class="item-qty">20</span></li>
-                            <li><a href="#"><span class="product-cb product-fabric-cb"><img src="images/demo-jewellery-store-product-listing-metal-03.jpg" alt="" /></span>Silver</a><span class="item-qty">07</span></li>
+                            @foreach ( $metals as $metal )
+                            <li>
+                                <a href="{{ route('products.index', array_merge(request()->except('page'), ['metal_id' => $metal->id])) }}">
+                                    <span class="product-cb product-fabric-cb">
+                                        <img src="{{ asset('images/demo-jewellery-store-product-listing-metal-03.jpg') }}" alt="{{ $metal->name }}" />
+                                    </span>
+                                    {{ $metal->name }}
+                                </a>
+                                <span class="item-qty">{{ $metalCounts[$metal->id] ?? 0 }}</span>
+                            </li>
+                             @endforeach
                         </ul>
                     </div>
                     <div class="mb-30px">

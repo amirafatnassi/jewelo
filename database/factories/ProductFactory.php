@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use App\Models\Color;
+use App\Models\Metal;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -47,7 +48,7 @@ class ProductFactory extends Factory
             'image' => Arr::random($images),
             'category_id' => Category::inRandomOrder()->first()?->id ?? Category::factory(),
             'color_id' => Color::query()->inRandomOrder()->value('id') ?? Color::factory(),
-
+            'metal_id' => Metal::query()->inRandomOrder()->value('id') ?? Metal::factory(),
         ];
     }
 }

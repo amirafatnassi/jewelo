@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(ColorSeeder::class);
-
+        $this->call(MetalSeeder::class);
 
         \App\Models\Category::factory(7)->create();
         \App\Models\Product::factory(20)->create();
