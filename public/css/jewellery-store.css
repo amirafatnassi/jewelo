@@ -323,11 +323,3 @@ footer .social-icon-style-09 ul li a span {
     .navbar .navbar-nav .nav-link { font-size: 17px; padding: 10px 7px;}
     .header-icon .icon > a { font-size: 17px; padding-left: 18px; }
 }
-
-.fixed-product-image {
-    width: 600px;
-    height: 675px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}

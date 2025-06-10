@@ -54,14 +54,14 @@
                         <li class="grid-item">
                             <div class="shop-box mb-10px">
                                 <div class="shop-image mb-6">
-                                    <a href="demo-jewellery-store-single-product.html">
+                                    <a href="{{url('products',$product->id)}}">
                                         <img src="{{ asset('images/products/'.$product->image) }}" alt="" style="width: 400px; height: 465px; object-fit: cover; border-radius: 8px; display: block; margin: 0 auto;">
                                         <span class="lable new mr-1">{{$product->category->name}}</span>
                                         <span class="lable new mr-1">{{$product->metal->name}}</span>
                                         <span class="lable new mr-1">{{$product->color->name}}</span>
                                     </a>
                                     <div class="shop-buttons-wrap">
-                                        <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                        <a href="{{url('products',$product->id)}}" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                             <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                         </a>
                                     </div>
@@ -77,7 +77,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-footer text-center">
-                                    <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{$product->name}}</a>
+                                    <a href="{{url('products',$product->id)}}" class="text-dark-gray fs-19 fw-500">{{$product->name}}</a>
                                     <div class="price">{{$product->price}}</div>
                                 </div>
                             </div>
@@ -195,34 +195,34 @@
                                     <div class="shop-filter new-arribals">
                                         <div class="d-flex align-items-center mb-20px">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Diamond ring</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Diamond ring</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$30.00</del>$23.00</div>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center mb-20px">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Geometric ring</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Geometric ring</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$50.00</del>$43.00</div>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Suserrer earring</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Suserrer earring</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$20.00</del>$15.00</div>
                                             </div>
                                         </div>
@@ -234,34 +234,34 @@
                                     <div class="shop-filter new-arribals">
                                         <div class="d-flex align-items-center mb-20px">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Twister bangle</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Twister bangle</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$15.00</del>$10.00</div>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center mb-20px">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Zebra earrings</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Zebra earrings</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$35.00</del>$30.00</div>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <figure class="mb-0">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="{{url('products',$product->id)}}">
                                                     <img class="border-radius-4px w-80px" src="https://placehold.co/600x765" alt="">
                                                 </a>
                                             </figure>
                                             <div class="col ps-25px">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray alt-font fw-500">Silver earrings</a>
+                                                <a href="{{url('products',$product->id)}}" class="text-dark-gray alt-font fw-500">Silver earrings</a>
                                                 <div class="fs-15 lh-normal"><del class="me-5px">$20.00</del>$15.00</div>
                                             </div>
                                         </div>

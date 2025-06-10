@@ -17,17 +17,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- bubblemorph add-on files -->
-    <link rel='stylesheet' href='revolution/revolution-addons/bubblemorph/css/revolution.addon.bubblemorph.css' type='text/css' media='all' />
+    <link rel='stylesheet' href="{{asset('revolution/revolution-addons/bubblemorph/css/revolution.addon.bubblemorph.css')}}" type='text/css' media='all' />
     <!-- slider revolution CSS files -->
     <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('revolution/css/layers.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('revolution/css/navigation.css')}}">
     <!-- style sheets and font icons  -->
-    <link rel="stylesheet" href="css/vendors.min.css" />
-    <link rel="stylesheet" href="css/icon.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ asset('css/vendors.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/icon.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{ asset('css/responsive.css')}}" />
-    <link rel="stylesheet" href="demos/jewellery-store/jewellery-store.css" />
+    <link rel="stylesheet" href="{{asset('demos/jewellery-store/jewellery-store.css')}}" />
 
 </head>
 
@@ -258,9 +258,9 @@
                 </div>
                 <div class="col-lg-2 justify-content-end justify-content-lg-center">
                     <a class="navbar-brand" href="demo-jewellery-store.html">
-                        <img src="images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="default-logo">
-                        <img src="images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="alt-logo">
-                        <img src="images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="mobile-logo">
+                        <img src="{{ asset('images/demo-jewellery-store-logo-black.png')}}" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="default-logo">
+                        <img src="{{ asset('images/demo-jewellery-store-logo-black.png')}}" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="alt-logo">
+                        <img src="{{ asset('images/demo-jewellery-store-logo-black.png')}}" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt="" class="mobile-logo">
                     </a>
                 </div>
                 <div class="col-auto col-lg-5 justify-content-end ms-auto md-pe-0">
@@ -340,12 +340,12 @@
     {{$slot}}
 
     <!-- start footer -->
-    <footer class="footer-dark bg-seashell-white pb-0 cover-background" style="background-image: url('images/demo-jewellery-store-footer-bg.jpg');">
+    <footer class="footer-dark bg-seashell-white pb-0">
         <div class="container">
             <div class="row justify-content-center mb-4 sm-mb-35px">
                 <!-- start footer column -->
                 <div class="col-6 col-lg-3 last-paragraph-no-margin order-sm-1 md-mb-50px xs-mb-30px">
-                    <a href="demo-jewellery-store.html" class="footer-logo d-inline-block mb-20px"><img src="images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt=""></a>
+                    <a href="demo-jewellery-store.html" class="footer-logo d-inline-block mb-20px"><img src="{{ asset('images/demo-jewellery-store-logo-black.png')}}" alt=""></a>
                     <span class="lh-22 alt-font fw-500 text-dark-gray d-block w-80 lg-w-100 mb-15px">Please reach out to when you need support.</span>
                     <div class="fs-16 text-brown"><i class="feather icon-feather-phone-call icon-small me-10px xs-me-5px text-dark-gray"></i><a href="tel:11234567890">+1 1234567890</a></div>
                     <div class="fs-16"><i class="feather icon-feather-mail icon-small me-10px xs-me-5px text-dark-gray"></i><a href="mailto:info@domain.com">info@domain.com</a></div>
@@ -477,25 +477,25 @@
     </div>
     <!-- end scroll progress -->
     <!-- javascript libraries -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/vendors.min.js')}}"></script>
     <!-- slider revolution core javaScript files -->
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
     <!-- slider revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
     <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
 
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script> -->
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.video.min.js')}}"></script> -->
     <!-- Slider Revolution add on files -->
-    <script type='text/javascript' src='revolution/revolution-addons/bubblemorph/js/revolution.addon.bubblemorph.min.js'></script>
+    <script type='text/javascript' src="{{asset('revolution/revolution-addons/bubblemorph/js/revolution.addon.bubblemorph.min.js')}}"></script>
     <!-- Slider's main "init" script -->
     <script type="text/javascript">
         var revapi263,

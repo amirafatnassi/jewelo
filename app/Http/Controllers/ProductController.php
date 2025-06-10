@@ -66,7 +66,7 @@ class ProductController extends Controller
         $categories = Category::all();
         $metals = Metal::all();
 
-        return view('products.index', compact('categories', 'metals', 'products', 'counts', 'colors', 'colorCounts','metalCounts'));
+        return view('products.index', compact('categories', 'metals', 'products', 'counts', 'colors', 'colorCounts', 'metalCounts'));
     }
 
 
@@ -108,7 +108,16 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show', compact('product'));
+        $categories = Category::all();
+        $metals = Metal::all();
+        $colors = Color::all();
+
+        // Get related products in the same category, excluding the current one
+        $relatedProducts = Product::where('category_id', $product->category_id)
+            ->where('id', '!=', $product->id)
+            ->take(4)
+            ->get();
+        return view('products.show', compact('categories','relatedProducts', 'metals', 'colors', 'product'));
     }
 
     /**
