@@ -24,42 +24,10 @@
                         <div class="col-12 col-lg-10 position-relative order-lg-2 product-image ps-30px md-ps-15px">
                             <div class="swiper product-image-slider" data-slider-options='{ "spaceBetween": 10, "loop": true, "autoplay": { "delay": 2000, "disableOnInteraction": false }, "watchOverflow": true, "navigation": { "nextEl": ".slider-product-next", "prevEl": ".slider-product-prev" }, "thumbs": { "swiper": { "el": ".product-image-thumb", "slidesPerView": "auto", "spaceBetween": 15, "direction": "vertical", "navigation": { "nextEl": ".swiper-thumb-next", "prevEl": ".swiper-thumb-prev" } } } }' data-thumb-slider-md-direction="horizontal">
                                 <div class="swiper-wrapper">
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
-                                        </a>
-                                    </div>
                                     <!-- end slider item -->
                                     <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- end slider item -->
-                                    <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- end slider item -->
-                                    <div class="swiper-slide gallery-box">
-                                        <a href="https://placehold.co/600x765" data-group="lightbox-gallery" title="Diamond gold bangle">
-                                            <img class="w-100" src="https://placehold.co/600x765" alt="">
+                                        <a data-group="lightbox-gallery" title="Diamond gold bangle">
+                                            <img class="w-100" src="{{ asset('images/products/'.$product->image) }}" alt="" style="width: 400px; height: 465px; object-fit: cover; border-radius: 8px; display: block; margin: 0 auto;">
                                         </a>
                                     </div>
                                     <!-- end slider item -->
@@ -194,48 +162,45 @@
             <div class="row justify-content-center mb-3">
                 <div class="col-xl-5 col-lg-6 col-md-8 text-center last-paragraph-no-margin">
                     <h3 class="fw-500 ls-minus-1px text-dark-gray mb-10px">You may also like</h3>
-                    <p>Lorem ipsum dolor amet consectetur adipiscing dictum placerat diam in vestibulum vivamus in eros.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <ul class="shop-modern shop-wrapper grid grid-4col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
-                        <li class="grid-sizer"></li>
-                        @foreach($relatedProducts as $p)
-                        <!-- start shop item -->
-                        <li class="grid-item">
-                            <div class="shop-box mb-10px">
-                                <div class="shop-image mb-25px">
-                                    <a href="demo-jewellery-store-single-product.html">
-                                        <img src="https://placehold.co/600x765" alt="">
-                                        <span class="lable new">New</span>
+                <ul class="shop-modern shop-wrapper grid grid-4col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                    <li class="grid-sizer"></li>
+                    @foreach($relatedProducts as $p)
+                    <!-- start shop item -->
+                    <li class="grid-item col-3">
+                        <div class="shop-box mb-10px">
+                            <div class="shop-image mb-25px">
+                                <a href="demo-jewellery-store-single-product.html">
+                                    <img src="{{ asset('images/products/'.$p->image) }}" alt="">
+                                    <span class="lable new">New</span>
+                                </a>
+                                <div class="shop-buttons-wrap">
+                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                        <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                     </a>
-                                    <div class="shop-buttons-wrap">
-                                        <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
-                                            <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
-                                        </a>
-                                    </div>
-                                    <div class="shop-hover d-flex justify-content-center">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="bg-white w-40px h-40px text-dark-gray d-flex align-items-center justify-content-center rounded-circle ms-5px me-5px box-shadow-large" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="feather icon-feather-heart fs-16"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="bg-white w-40px h-40px text-dark-gray d-flex align-items-center justify-content-center rounded-circle ms-5px me-5px box-shadow-large" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick shop"><i class="feather icon-feather-eye fs-16"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
-                                <div class="shop-footer text-center">
-                                    <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{$p->name}}</a>
-                                    <div class="price"><del>${{$p->old_price}}</del>{{$p->price}}</div>
+                                <div class="shop-hover d-flex justify-content-center">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="bg-white w-40px h-40px text-dark-gray d-flex align-items-center justify-content-center rounded-circle ms-5px me-5px box-shadow-large" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="feather icon-feather-heart fs-16"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-white w-40px h-40px text-dark-gray d-flex align-items-center justify-content-center rounded-circle ms-5px me-5px box-shadow-large" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick shop"><i class="feather icon-feather-eye fs-16"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </li>
-                        <!-- end shop item -->
-                        @endforeach
-                    </ul>
-                </div>
+                            <div class="shop-footer text-center">
+                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{$p->name}}</a>
+                                <div class="price"><del>${{$p->old_price}}</del>{{$p->price}}</div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end shop item -->
+                    @endforeach
+                </ul>
             </div>
         </div>
     </section>
