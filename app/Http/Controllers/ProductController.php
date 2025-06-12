@@ -46,9 +46,6 @@ class ProductController extends Controller
             'above_200'  => Product::where('price', '>', 200)->count(),
         ];
 
-        // Fetch colors for filter list
-        $colors = Color::all();
-
         // Count products by color for UI
         $colorCounts = Product::select('color_id')
             ->selectRaw('count(*) as count')
@@ -57,16 +54,13 @@ class ProductController extends Controller
             ->toArray();
 
         // Metals & counts (optional)
-        $metals = Metal::all();
         $metalCounts = Product::select('metal_id')
             ->selectRaw('count(*) as count')
             ->groupBy('metal_id')
             ->pluck('count', 'metal_id')
             ->toArray();
-        $categories = Category::all();
-        $metals = Metal::all();
 
-        return view('products.index', compact('categories', 'metals', 'products', 'counts', 'colors', 'colorCounts', 'metalCounts'));
+        return view('products.index', compact('products', 'counts', 'colorCounts', 'metalCounts'));
     }
 
 
@@ -103,6 +97,14 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
+    // For category page
+    public function category($id)
+    {
+        $category = Category::findorFail($id);
+        $products = Product::where('category_id', $id)->paginate(12);
+        return view('products.category', compact('products', 'category'));
+    }
+
     /**
      * Display a single product.
      */
@@ -117,7 +119,7 @@ class ProductController extends Controller
             ->where('id', '!=', $product->id)
             ->take(4)
             ->get();
-        return view('products.show', compact('categories','relatedProducts', 'metals', 'colors', 'product'));
+        return view('products.show', compact('categories', 'relatedProducts', 'metals', 'colors', 'product'));
     }
 
     /**

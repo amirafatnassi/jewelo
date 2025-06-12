@@ -18,6 +18,9 @@ Route::get('/categories', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -33,5 +36,6 @@ Route::middleware(['auth'])->group(function () {
 
 Route::resource('products', ProductController::class);
 Route::resource('categories', CategoryController::class);
+Route::get('products/category/{id}', [ProductController::class,'category'])->name('products.category');
 
 require __DIR__ . '/auth.php';

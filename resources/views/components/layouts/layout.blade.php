@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ asset('css/icon.min.css')}}" />
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{ asset('css/responsive.css')}}" />
-    <link rel="stylesheet" href="{{asset('demos/jewellery-store/jewellery-store.css')}}" />
+    <link rel="stylesheet" href="{{ asset('demos/jewellery-store/jewellery-store.css')}}" />
 
 </head>
 
@@ -355,11 +355,9 @@
                 <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
                     <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Categories</span>
                     <ul class="fs-16">
-                        <li><a href="demo-jewellery-store-shop.html">Women collection</a></li>
-                        <li><a href="demo-jewellery-store-shop.html">Men collection</a></li>
-                        <li><a href="demo-jewellery-store-shop.html">Accessories</a></li>
-                        <li><a href="demo-jewellery-store-shop.html">Diamond</a></li>
-                        <li><a href="demo-jewellery-store-shop.html">Gold jewellery</a></li>
+                        @foreach($categories as $category)
+                        <li><a href="{{url('products/category',$category->id)}}">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- end footer column -->
@@ -493,7 +491,7 @@
     <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.video.min.js')}}"></script> -->
+    <script type="text/javascript" src="{{ asset('revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
     <!-- Slider Revolution add on files -->
     <script type='text/javascript' src="{{asset('revolution/revolution-addons/bubblemorph/js/revolution.addon.bubblemorph.min.js')}}"></script>
     <!-- Slider's main "init" script -->
