@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ColorSeeder::class);
         $this->call(MetalSeeder::class);
+        $this->call(BlogSeeder::class);
 
         \App\Models\Category::factory(7)->create();
         \App\Models\Product::factory(20)->create();

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,9 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('blogs', [BlogController::class,'index'])->name('blogs');
+Route::get('blogs/show/{id}', [BlogController::class,'show'])->name('blogs.show');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

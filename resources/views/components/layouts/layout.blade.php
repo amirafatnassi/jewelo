@@ -251,7 +251,7 @@
                                     <li><a href="demo-jewellery-store-checkout.html">Checkout</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="demo-jewellery-store-blog.html" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="{{url('blogs')}}" class="nav-link">Blog</a></li>
                             <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
                         </ul>
                     </div>
