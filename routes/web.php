@@ -26,6 +26,10 @@ Route::get('/about', function () {
 Route::get('blogs', [BlogController::class,'index'])->name('blogs');
 Route::get('blogs/show/{id}', [BlogController::class,'show'])->name('blogs.show');
 
+Route::get('blogs/single-clean', function () {
+    return view('blogs/single-clean');
+})->name('single-clean');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

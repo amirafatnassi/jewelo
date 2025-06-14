@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Category;
@@ -41,6 +42,10 @@ class AppServiceProvider extends ServiceProvider
                 ->latest()
                 ->take(10)
                 ->get());
+        });
+
+        View::composer('*', function ($view) {
+            $view->with('relatedBlogs', Blog::inRandomOrder()->take(4)->get());
         });
     }
 }

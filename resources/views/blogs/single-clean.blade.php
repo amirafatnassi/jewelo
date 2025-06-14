@@ -1,13 +1,14 @@
 ﻿<x-layouts.layout>
+
     <!-- start section -->
     <section class="top-space-margin py-0" data-parallax-background-ratio="0.5" style="background-image: url('{{asset('images/background-jewelo.jpg')}}')">
         <div class="container-fluid">
             <div class="row justify-content-center text-center">
                 <div class="col-xxl-6 col-lg-9 d-flex flex-column justify-content-center full-screen md-h-600px sm-h-500px">
                     <div class="ps-15 pe-15 lg-px-0">
-                        <span class="alt-font ls-minus-05px fs-20 text-light-gray mb-5 d-inline-block">Posted by <a href="demo-jewellery-store-blog.html" class="text-light-gray text-light-gray-hover fw-600 text-decoration-line-bottom">{{$blog->author->name}}</a></span>
-                        <h1 class="alt-font text-light-gray fw-600 mb-8 ls-minus-2px">{{$blog->title}}.</h1>
-                        <a href="demo-jewellery-store-blog.html" class="btn btn-gray btn-medium text-light-gray">{{$blog->category}}</a>
+                        <span class="alt-font ls-minus-05px fs-20 text-light-gray mb-5 d-inline-block">Posted by <a href="demo-jewellery-store-blog.html" class="text-light-gray text-light-gray-hover fw-600 text-decoration-line-bottom">colene landin</a></span>
+                        <h1 class="alt-font text-light-gray fw-600 mb-8 ls-minus-2px">I have a lot of lion jewellery and lion art. I also love crystals.</h1>
+                        <a href="demo-jewellery-store-blog.html" class="btn btn-gray text-light-gray btn-medium">luxury design</a>
                     </div>
                 </div>
             </div>
@@ -20,11 +21,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="dropcap-style-04">
-                        <p><span class="alt-font first-letter first-letter-block border first-letter-round border-2 border-color-light-medium-gray text-dark-gray">{{ mb_substr($blog->excerpt, 0, 1) }}</span></p>
+                        <p><span class="alt-font first-letter first-letter-block border first-letter-round border-2 border-color-light-medium-gray text-dark-gray">N</span>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
                     <div class="text-center mt-6">
-                        <h5 class="alt-font fw-600 text-dark-gray w-90 mx-auto mb-15px xl-w-100">{{$blog->excerpt}}</h5>
-                        <span class="text-uppercase fs-14 ls-2px alt-font">- {{$blog->author->name}} -</span>
+                        <h5 class="alt-font fw-600 text-dark-gray w-90 mx-auto mb-15px xl-w-100">Architecture tends to consume everything else it has become one's entire life.</h5>
+                        <span class="text-uppercase fs-14 ls-2px alt-font">- Shoko mugikura -</span>
                     </div>
                 </div>
             </div>
@@ -34,47 +35,44 @@
     <!-- start section -->
     <section class="one-fourth-screen" data-parallax-background-ratio="0.5" style="background-image: url(https://placehold.co/1920x1080)"></section>
     <!-- end section -->
-
     <!-- start section -->
-
     <section>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 last-paragraph-no-margin">
-                    @foreach(explode("\n", $blog->content) as $paragraph)
-                    @if(trim($paragraph) !== '')
-
-                    @php
-                    $lines = array_filter(explode("\n", $paragraph));
-                    @endphp
-
-                    @foreach($lines as $line)
-                    @if(str_starts_with($line, '## '))
-                    <h5 class="alt-font fw-600 text-dark-gray">
-                        {{ substr($line, 3) }}
-                    </h5>
-                    @elseif(trim($line) !== '')
-                    <p>{{ $line }}</p>
-                    @endif
-                    @endforeach
-                    @endif
-                    @endforeach
+                    <h5 class="alt-font fw-600 text-dark-gray">Tomorrow is the most important thing in life comes into us at midnight very clean.</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper ex nunc, in fringilla fringilla sed. Nam semper odio eu urna viverra, eu luctus mauris sollicitudin. Morbi ultricies est et odio vehicula, vel lacinia ipsum ullamcorper. Mauris mattis placerat quam, aliquam vestibulum dui bibendum eu. Curabitur eu euismod ex, et hendrerit purus. Donec condimentum neque id iaculis. Etiam dui id dolor lobortis cursus ac maximus nisl in sodales lacus nec cursus varius.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- end section -->
-
-    <!-- <section class="py-0">
+    <!-- start section -->
+    <section class="py-0">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <img src="https://placehold.co/1200x700" class="w-100 mb-7" alt="">
+                    <img src="https://placehold.co/1200x700" class="w-100" alt="">
                 </div>
             </div>
         </div>
-    </section> -->
-
+    </section>
+    <!-- end section -->
+    <!-- start section -->
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 last-paragraph-no-margin">
+                    <h5 class="alt-font fw-600 text-dark-gray mb-15px">Architecture is inhabited sculpture.</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper ex nunc, in fringilla fringilla sed. Nam semper odio eu urna viverra, eu luctus mauris sollicitudin. Morbi ultricies est et odio vehicula, vel lacinia ipsum ullamcorper. Mauris mattis placerat quam, aliquam vestibulum dui bibendum eu. Curabitur eu euismod ex, et hendrerit purus. Donec condimentum neque id iaculis. Etiam dui id dolor lobortis cursus ac maximus nisl in sodales lacus nec cursus varius.</p>
+                    <h5 class="alt-font fw-600 text-dark-gray mt-6 mb-15px">A room is not a room without natural light.</h5>
+                    <p>Morbi ultricies est et odio vehicula, vel lacinia ipsum ullamcorper. Mauris mattis placerat quam, aliquam vestibulum dui bibendum eu. Curabitur eu euismod ex, and many hendrerit purus. Donec condimentum vel neque id iaculis. Etiam dolor lobortis cursus ac maximus nisl. In sodales lacus ullamcorper ultricies est et odio vehicula mattis placerat quam cursus varius.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
     <!-- start section -->
     <section class="half-section pt-0">
         <div class="container">
@@ -122,7 +120,6 @@
         </div>
     </section>
     <!-- end section -->
-
     <!-- start section -->
     <section class="bg-very-light-gray">
         <div class="container">
@@ -133,29 +130,74 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($relatedBlogs as $blog)
-                <!-- start blog item -->
-                <div class="col-3 mb-5">
-                    <div class="box-hover text-center">
-                        <figure class="mb-0 position-relative">
-                            <div class="blog-image position-relative overflow-hidden">
-                                <a href="{{url('blogs/show',$blog->id)}}"><img src="{{asset('images/blog/'.$blog->image)}}" alt="" style="height: 315px; object-fit: cover;" /></a>
-                            </div>
-                            <figcaption class="post-content-wrapper">
-                                <div class="position-relative bg-dark-gray post-content p-25px z-index-2 lh-initial">
-                                    <div class="hover-text">
-                                        <a href="{{url('blogs/show'.$blog->id)}}" class="text-base-color text-base-color-hover fs-14 text-uppercase fw-500 mb-10px d-inline-block">{{$blog->category}}</a>
+                <div class="col-12">
+                    <ul class="blog-modern blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large">
+                        <li class="grid-sizer"></li>
+                        <!-- start blog item -->
+                        <li class="grid-item md-mb-20px">
+                            <div class="box-hover text-center">
+                                <figure class="mb-0 position-relative">
+                                    <div class="blog-image position-relative overflow-hidden">
+                                        <a href="demo-jewellery-store-blog-single-clean.html"><img src="https://placehold.co/800x1015" alt="" /></a>
                                     </div>
-                                    <a href="{{url('blogs/show',$blog->id)}}" class="fs-20 alt-font text-white card-title d-inline-block mb-0">{{ Str::limit($blog->excerpt, 80) }}</a>
-                                    <div class="box-overlay bg-dark-gray z-index-minus-1"></div>
-                                </div>
-                                <div class="fs-17 alt-font lh-initial bg-base-color text-dark-gray p-15px"><span class="d-inline-block">By <a href="{{url('blogs/show'.$blog->id)}}" class="text-dark-gray">{{$blog->author->name}}</a></span><span class="separator d-inline-block fs-14">|</span><a href="#" class="text-dark-gray">{{ $blog->published_at->format('d M Y') }}</a></div>
-                            </figcaption>
-                        </figure>
-                    </div>
+                                    <figcaption class="post-content-wrapper">
+                                        <div class="position-relative bg-dark-gray post-content p-25px z-index-2 lh-initial">
+                                            <div class="hover-text">
+                                                <a href="demo-jewellery-store-blog.html" class="text-base-color text-base-color-hover fs-14 text-uppercase fw-500 mb-10px d-inline-block">Jewellery</a>
+                                            </div>
+                                            <a href="demo-jewellery-store-blog-single-clean.html" class="fs-20 alt-font text-white card-title d-inline-block mb-0">It takes a real designer to design for real women</a>
+                                            <div class="box-overlay bg-dark-gray z-index-minus-1"></div>
+                                        </div>
+                                        <div class="fs-17 alt-font lh-initial bg-base-color text-dark-gray p-15px"><span class="d-inline-block">By <a href="demo-jewellery-store-blog.html" class="text-dark-gray">Jonse robbert</a></span><span class="separator d-inline-block fs-14 fs-14">|</span><a href="#" class="text-dark-gray">30 June 2023</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                        <!-- end blog item -->
+                        <!-- start blog item -->
+                        <li class="grid-item md-mb-20px">
+                            <div class="box-hover text-center">
+                                <figure class="mb-0 position-relative">
+                                    <div class="blog-image position-relative overflow-hidden">
+                                        <a href="demo-jewellery-store-blog-single-clean.html"><img src="https://placehold.co/800x1015" alt="" /></a>
+                                    </div>
+                                    <figcaption class="post-content-wrapper">
+                                        <div class="position-relative bg-dark-gray post-content p-25px z-index-2 lh-initial">
+                                            <div class="hover-text">
+                                                <a href="demo-jewellery-store-blog.html" class="text-base-color text-base-color-hover fs-14 text-uppercase fw-500 mb-10px d-inline-block">Jewellery</a>
+                                            </div>
+                                            <a href="demo-jewellery-store-blog-single-clean.html" class="fs-20 alt-font text-white card-title d-inline-block mb-0">I get sent lots of jewellery by fans, that's absolutely lovely</a>
+                                            <div class="box-overlay bg-dark-gray z-index-minus-1"></div>
+                                        </div>
+                                        <div class="fs-17 alt-font lh-initial bg-base-color text-dark-gray p-15px"><span class="d-inline-block">By <a href="demo-jewellery-store-blog.html" class="text-dark-gray">Katie mcgrath</a></span><span class="separator d-inline-block fs-14">|</span><a href="#" class="text-dark-gray">22 June 2023</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                        <!-- end blog item -->
+                        <!-- start blog item -->
+                        <li class="grid-item">
+                            <div class="box-hover text-center">
+                                <figure class="mb-0 position-relative">
+                                    <div class="blog-image position-relative overflow-hidden">
+                                        <a href="demo-jewellery-store-blog-single-clean.html"><img src="https://placehold.co/800x1015" alt="" /></a>
+                                    </div>
+                                    <figcaption class="post-content-wrapper">
+                                        <div class="position-relative bg-dark-gray post-content p-25px z-index-2 lh-initial">
+                                            <div class="hover-text">
+                                                <a href="demo-jewellery-store-blog.html" class="text-base-color text-base-color-hover fs-14 text-uppercase fw-500 mb-10px d-inline-block">Jewellery</a>
+                                            </div>
+                                            <a href="demo-jewellery-store-blog-single-clean.html" class="fs-20 alt-font text-white card-title d-inline-block mb-0">We don't have a jewellery background, we just come</a>
+                                            <div class="box-overlay bg-dark-gray z-index-minus-1"></div>
+                                        </div>
+                                        <div class="fs-17 alt-font lh-initial bg-base-color text-dark-gray p-15px"><span class="d-inline-block">By <a href="demo-jewellery-store-blog.html" class="text-dark-gray">Rosald smith</a></span><span class="separator d-inline-block fs-14">|</span><a href="#" class="text-dark-gray">05 June 2023</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                        <!-- end blog item -->
+                    </ul>
                 </div>
-                <!-- end blog item -->
-                @endforeach
             </div>
         </div>
     </section>

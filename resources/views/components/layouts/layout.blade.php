@@ -36,14 +36,14 @@
     <header class="header-with-topbar">
         <!-- start header top bar -->
         <div class="header-top-bar top-bar-light bg-dark-gray disable-fixed md-border-bottom border-color-transparent-dark-very-light">
-            <div class="container-fluid">
+            <!-- <div class="container-fluid">
                 <div class="row h-40px align-items-center m-0">
                     <div class="col-12 justify-content-center alt-font">
                         <div class="fs-13 text-white text-uppercase">Free shipping on all orders $50, don't miss discount.</div>
                         <a href="#" class="fs-13 fw-500 text-base-color text-base-color-hover text-uppercase ms-5px"><i class="feather icon-feather-bookmark icon-small align-middle"></i> <span class="text-decoration-line-bottom">Get offers</span></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- end header top bar -->
         <!-- start navigation -->
