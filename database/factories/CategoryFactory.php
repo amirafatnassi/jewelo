@@ -17,6 +17,7 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+
         static $categories = [
             'Rings',
             'Bracelet',
@@ -34,13 +35,17 @@ class CategoryFactory extends Factory
             return [
                 'name' => null,
                 'slug' => null,
+                'image' => null,
             ];
         }
 
         $name = $categories[$index++];
+        $slug = Str::slug($name);
+
         return [
             'name' => $name,
-            'slug' => Str::slug($name),
+            'slug' => $slug,
+            'image' => strtolower($slug) . '.jpg',
         ];
     }
 }

@@ -60,7 +60,7 @@
                         <ul class="navbar-nav alt-font">
                             <li class="nav-item"><a href="demo-jewellery-store.html" class="nav-link">Home</a></li>
                             <li class="nav-item dropdown submenu">
-                                <a href="{{url('shop')}}" class="nav-link">Shop</a>
+                                <a href="{{url('products')}}" class="nav-link">Shop</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
                                     <div class="d-lg-flex mega-menu m-auto flex-column">

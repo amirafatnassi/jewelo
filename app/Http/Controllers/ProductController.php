@@ -97,14 +97,6 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
-    // For category page
-    public function category($id)
-    {
-        $category = Category::findorFail($id);
-        $products = Product::where('category_id', $id)->paginate(12);
-        return view('products.category', compact('products', 'category'));
-    }
-
     /**
      * Display a single product.
      */

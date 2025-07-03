@@ -9,9 +9,9 @@
                         <div class="mt-auto">
                             <h1 class="fw-500 text-light-gray alt-font mb-0 ls-minus-2px">Shop collection</h1>
                         </div>
-                        <div class="fs-16 fw-500 alt-font text-dark-gray justify-content-center breadcrumb breadcrumb-style-01 mt-auto">
+                        <div class="fs-16 fw-500 alt-font text-light-gray justify-content-center breadcrumb breadcrumb-style-01 mt-auto">
                             <ul>
-                                <li><a href="demo-jewellery-store.html" class="text-dark-gray text-medium-gray-hover">Home</a></li>
+                                <li><a href="demo-jewellery-store.html" class="text-light-gray text-medium-gray-hover">Home</a></li>
                                 <li>Shop</li>
                             </ul>
                         </div>

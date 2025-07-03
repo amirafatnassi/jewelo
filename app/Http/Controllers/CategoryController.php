@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -9,6 +11,16 @@ class CategoryController extends Controller
     /**
      * Show all categories.
      */
+
+    // For category page
+    public function category($id)
+    {
+        $category = Category::findorFail($id);
+        $products = Product::where('category_id', $id)->paginate(12);
+        return view('products.category', compact('products'));
+    }
+
+
     public function index()
     {
         $categories = Category::latest()->get();

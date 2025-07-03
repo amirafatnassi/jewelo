@@ -13,9 +13,6 @@ Route::get('/index', function () {
     return view('index');
 })->name('index');
 
-Route::get('/categories', function () {
-    return view('categories');
-})->name('categories');
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
